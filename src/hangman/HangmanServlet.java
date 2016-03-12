@@ -1,6 +1,7 @@
 package hangman;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,8 +28,10 @@ public class HangmanServlet extends HttpServlet {
    
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		HangmanModel model = (HangmanModel) request.getSession().getAttribute("HangModelBean");
 		HangmanController control = (HangmanController) request.getSession().getAttribute("HangControlBean");
+		
 		
 		String guess = request.getParameter("guess").toUpperCase();
 		

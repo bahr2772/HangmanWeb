@@ -14,7 +14,6 @@ public class HangmanController {
 			
 		
 		try {
-		//	Scanner	filePath = new Scanner(new File("/Users/bahr2772/Documents/workspace/HangmanWeb/src/words.csv")).useDelimiter("line.separator");
 			Scanner filePath = new Scanner(new File(filesPathAndName)).useDelimiter("line.sepatator");
 			String word;
 

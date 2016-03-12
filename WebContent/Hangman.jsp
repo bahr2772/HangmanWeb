@@ -3,23 +3,25 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <jsp:useBean id="HangModelBean" class="hangman.HangmanModel" scope="session" />
-<jsp:useBean id="HangControlBean" class="hangman.HangmanController"
-	scope="session" />
+<jsp:useBean id="HangControlBean" class="hangman.HangmanController" scope="session" />
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel="stylesheet" href="HangmanStyle.css">
+<link rel="stylesheet" href="css/HangmanStyle.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Hangman Game</title>
 </head>
 <body>
+	<%@include file="header.jsp"%>
+
 	<c:if test="${sessionScope.game =='0' || sessionScope.game == null}">
 		<%@ include file="hangmanstart.jsp"%>
 	</c:if>
 
 	<c:if test="${sessionScope.game =='1'}">
-		<div class=container>
+		<div class=Hangcontainer>
 		 
 			<div id=heading>
 				<h1>Hang the Man Game</h1>
@@ -95,5 +97,10 @@
 	</c:if>
 
 
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

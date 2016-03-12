@@ -3,13 +3,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel="stylesheet" href="HangmanStyle.css">
+<link rel="stylesheet" href="css/HangmanStyle.css">
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Lets get Started</title>
 </head>
 <body>
-
+<%@include file="header.jsp"%>
 	
 			<div id="startpage">
 
@@ -26,5 +26,11 @@
 					
 				</form>
 	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
